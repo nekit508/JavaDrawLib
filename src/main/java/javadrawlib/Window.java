@@ -1,5 +1,4 @@
 package javadrawlib;
-
 import javadrawlib.drawtools.Draw;
 import javautils.types.lambdas.Out0In1;
 
