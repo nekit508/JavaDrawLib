@@ -1,12 +1,7 @@
 apply plugin: "java"
 
 ext {
-    jarName = "JavaDrawLib"
-    jarPath = "C:\\Users\\Никита\\Desktop"
-
-    vers = "v1.0"
-
-    javaUtilsVersion = "v3.3"
+    javaUtilsVersion = "d892267f12"
 }
 
 repositories {
@@ -18,10 +13,10 @@ wrapper {
     gradleVersion = '7.4.2'
 }
 
-jar {
-    archiveFileName = "${jarPath}\\${jarName}-${vers}.jar"
+dependencies {
+    implementation "com.github.nekit508:JavaUtils:${javaUtilsVersion}"
 }
 
-dependencies {
-    compileOnly "com.github.nekit508:JavaUtils:${javaUtilsVersion}"
+jar {
+
 }
