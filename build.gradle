@@ -3,6 +3,15 @@ apply plugin: "java"
 ext {
     jarName = "JavaDrawLib"
     jarPath = "C:\\Users\\Никита\\Desktop"
+
+    vers = "v1.0"
+
+    javaUtilsVersion = "v3.3"
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 wrapper {
@@ -10,9 +19,9 @@ wrapper {
 }
 
 jar {
-    archiveFileName = "${jarPath}\\${jarName}.jar"
+    archiveFileName = "${jarPath}\\${jarName}-${vers}.jar"
 }
 
 dependencies {
-    compileOnly files("C:\\Users\\Никита\\Desktop\\JavaUtils.jar")
+    compileOnly "com.github.nekit508:JavaUtils:${javaUtilsVersion}"
 }
