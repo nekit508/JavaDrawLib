@@ -1,12 +1,13 @@
 apply plugin: "java"
 
 ext {
-    javaUtilsVersion = "d892267f12"
+    javaUtilsVersion = "a0ce329b88"
 }
 
-repositories {
-    mavenCentral()
-    maven { url "https://jitpack.io" }
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
 }
 
 wrapper {
