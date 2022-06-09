@@ -24,7 +24,6 @@ public class Window extends JFrame {
         setLayout(null);
 
         add(canvas);
-        pack();
 
         setVisible(true);
         setResizable(false);
