@@ -19,6 +19,13 @@ public class Draw {
         return new Color(r, g, b, 1f);
     }
 
+    public static void reset(){
+        g2d.get().setColor(new Color(0f, 0f, 0f, 1f));
+        colors = new Seq<Color>();
+        g2d.get().setFont(classicFont);
+        fonts = new Seq<Font>();
+    }
+
     public static void pushColor(Color col){
         g2d.get().setColor(col);
         colors.add(col);

@@ -1,23 +1,22 @@
 apply plugin: "java"
 
 ext {
-    javaUtilsVersion = "a0ce329b88"
-}
+    n = "javaDrawLib"
+    v = "v1.3a"
+    e = "jar"
 
-allprojects {
-    repositories {
-        maven { url 'https://jitpack.io' }
-    }
+    javaUtilsVersion = "v3.0"
 }
 
 wrapper {
     gradleVersion = '7.4.2'
 }
 
-dependencies {
-    implementation "com.github.nekit508:JavaUtils:${javaUtilsVersion}"
+jar {
+    archiveFileName = "D:\\libs\\${n}-${v}.${e}"
+
 }
 
-jar {
-
+dependencies {
+    implementation files("D:\\libs\\javaUtils-${javaUtilsVersion}.jar")
 }
